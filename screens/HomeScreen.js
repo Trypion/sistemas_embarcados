@@ -1,6 +1,5 @@
 import { StyleSheet, ScrollView } from "react-native";
 
-
 import Card from "../components/Card";
 import { Text, View } from "../components/Themed";
 
@@ -18,16 +17,17 @@ const AVAIBLE_RENTS = [
     restricoes: {
       sexo: "masculino",
       numero_pessoas: 2,
-      banheiro: "compartilhado"
+      banheiro: "compartilhado",
     },
     mobilia: [],
     area: "100m²",
     fotos: [],
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    descricao:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     telefone: "(11) 99999-9999",
     email: "xuxa@gmail.com",
-    regras: "",    
+    regras: "",
   },
   {
     id: 2,
@@ -42,16 +42,17 @@ const AVAIBLE_RENTS = [
     restricoes: {
       sexo: "masculino",
       numero_pessoas: 2,
-      banheiro: "compartilhado"
+      banheiro: "compartilhado",
     },
     mobilia: [],
     area: "100m²",
     fotos: [],
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    descricao:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     telefone: "(11) 99999-9999",
     email: "xuxa@gmail.com",
-    regras: "",    
+    regras: "",
   },
   {
     id: 3,
@@ -66,30 +67,29 @@ const AVAIBLE_RENTS = [
     restricoes: {
       sexo: "masculino",
       numero_pessoas: 2,
-      banheiro: "compartilhado"
+      banheiro: "compartilhado",
     },
     mobilia: [],
     area: "100m²",
     fotos: [],
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    descricao:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     telefone: "(11) 99999-9999",
     email: "xuxa@gmail.com",
-    regras: "",    
-  }
-]
-
+    regras: "",
+  },
+];
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One</Text>
-        <ScrollView>
-          {AVAIBLE_RENTS.map((rent) => (
-            <Card key={rent.id} rent={rent} />
-          ))}
-        </ScrollView>
-      <Card path="/screens/HomeScreen.tsx" />
+      <ScrollView>
+        {AVAIBLE_RENTS.map((rent) => (
+          <Card key={rent.id} rent={rent} />
+        ))}
+      </ScrollView>
     </View>
   );
 }

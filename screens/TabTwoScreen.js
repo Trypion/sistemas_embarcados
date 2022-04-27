@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 
-import Card from "../components/Card";
 import { Text, View } from "../components/Themed";
 
 export default function TabTwoScreen() {
@@ -12,7 +11,7 @@ export default function TabTwoScreen() {
         lightColor="#eee"
         darkColor="rgba(255,255,255,0.1)"
       />
-      <Card path="/screens/TabTwoScreen.tsx" />
+      
     </View>
   );
 }
