@@ -84,7 +84,6 @@ const AVAIBLE_RENTS = [
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
       <ScrollView>
         {AVAIBLE_RENTS.map((rent) => (
           <Card key={rent.id} rent={rent} />
