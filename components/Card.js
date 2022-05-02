@@ -2,9 +2,7 @@ import * as WebBrowser from "expo-web-browser";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
 import Colors from "../constants/Colors";
-import { MonoText } from "./StyledText";
 import { Text, View } from "./Themed";
-import { ScrollView } from 'react-native'
 
 export default function Card({ rent }) {
 
@@ -30,7 +28,7 @@ const styles = StyleSheet.create({
     // flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: "5px",
+    borderRadius: 5,
     width: "90vw",
     backgroundColor: "#fff6",
     margin: 8,

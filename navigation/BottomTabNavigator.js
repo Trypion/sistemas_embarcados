@@ -7,6 +7,7 @@ import { useColorScheme } from "react-native";
 
 import Colors from "../constants/Colors";
 import HomeScreen from "../screens/HomeScreen";
+import RentDetail from "../components/RentDetail";
 import TabTwoScreen from "../screens/TabTwoScreen";
 
 const BottomTab = createBottomTabNavigator();
@@ -58,6 +59,11 @@ function TabOneNavigator() {
         name="HomeScreen"
         component={HomeScreen}
         options={{ headerTitle: "Tab One Title" }}
+      />
+      <TabOneStack.Screen
+        name="RentDetail"
+        component={RentDetail}
+        options={{ headerTitle: "Rent Detail" }}
       />
     </TabOneStack.Navigator>
   );

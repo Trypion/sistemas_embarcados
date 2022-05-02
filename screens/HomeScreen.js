@@ -1,7 +1,7 @@
 import { StyleSheet, ScrollView } from "react-native";
 
 import Card from "../components/Card";
-import { Text, View } from "../components/Themed";
+import { Text, View, Button } from "../components/Themed";
 
 const AVAIBLE_RENTS = [
   {
@@ -81,12 +81,14 @@ const AVAIBLE_RENTS = [
   },
 ];
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView>
         {AVAIBLE_RENTS.map((rent) => (
-          <Card key={rent.id} rent={rent} />
+          <div key={rent.id} onClick={() => navigation.navigate('RentDetail', {rent})}>
+            <Card key={rent.id} rent={rent}/>
+          </div>
         ))}
       </ScrollView>
     </View>
