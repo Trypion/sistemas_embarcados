@@ -1,17 +1,29 @@
-import { StyleSheet } from "react-native";
+import React from "react";
+import { ScrollView, StyleSheet } from "react-native";
+import Card from "../components/Card";
+import { View } from "../components/Themed";
+import { getUserScheduledRents } from "../services/Api";
 
-import { Text, View } from "../components/Themed";
+export default function UserFavorites({ navigation }) {
+  const [userScheduledRents, setUserScheduledRents] = React.useState([]);
 
-export default function UserFavorites() {
+  React.useEffect(async () => {
+    const data = await getUserScheduledRents();
+    setUserScheduledRents(data);
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      
+      <ScrollView>
+        {userScheduledRents.map((rent) => (
+          <div
+            key={rent.id}
+            onClick={() => navigation.navigate("RentDetail", { rent })}
+          >
+            <Card key={rent.id} rent={rent} />
+          </div>
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -21,14 +33,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
   },
 });

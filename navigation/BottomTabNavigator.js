@@ -25,16 +25,16 @@ export default function BottomTabNavigator() {
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <TabBarIcon name="home" color={color} />
           ),
         }}
       />
       <BottomTab.Screen
-        name="Meus Favoritos"
+        name="Minhas visitas"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="ios-code" color={color} />
+            <TabBarIcon name="heart" color={color} />
           ),
         }}
       />
@@ -63,7 +63,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="RentDetail"
         component={RentDetail}
-        options={{ headerTitle: "Rent Detail" }}
+        options={{ headerTitle: "Detalhes do aluguel" }}
       />
     </TabOneStack.Navigator>
   );
@@ -78,6 +78,11 @@ function TabTwoNavigator() {
         name="UserFavorites"
         component={UserFavorites}
         options={{ headerTitle: "Sua lista de favoritos" }}
+      />
+      <TabOneStack.Screen
+        name="RentDetail"
+        component={RentDetail}
+        options={{ headerTitle: "Visita agendada" }}
       />
     </TabTwoStack.Navigator>
   );
