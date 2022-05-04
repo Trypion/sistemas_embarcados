@@ -17,11 +17,11 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Home"
       screenOptions={{ tabBarActiveTintColor: Colors[colorScheme].tint }}
     >
       <BottomTab.Screen
-        name="TabOne"
+        name="Home"
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -58,7 +58,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="HomeScreen"
         component={HomeScreen}
-        options={{ headerTitle: "Tab One Title" }}
+        options={{ headerTitle: "Lista de lugares disponível" }}
       />
       <TabOneStack.Screen
         name="RentDetail"
