@@ -8,7 +8,7 @@ import { useColorScheme } from "react-native";
 import Colors from "../constants/Colors";
 import HomeScreen from "../screens/HomeScreen";
 import RentDetail from "../components/RentDetail";
-import TabTwoScreen from "../screens/TabTwoScreen";
+import UserFavorites from "../screens/UserFavorites";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -30,7 +30,7 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="Meus Favoritos"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => (
@@ -75,9 +75,9 @@ function TabTwoNavigator() {
   return (
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: "Tab Two Title" }}
+        name="UserFavorites"
+        component={UserFavorites}
+        options={{ headerTitle: "Sua lista de favoritos" }}
       />
     </TabTwoStack.Navigator>
   );
