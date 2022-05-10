@@ -7,9 +7,19 @@ import { getUserScheduledRents } from "../services/Api";
 export default function UserFavorites({ navigation }) {
   const [userScheduledRents, setUserScheduledRents] = React.useState([]);
 
-  React.useEffect(async () => {
+  const fetchData = async () => {
     const data = await getUserScheduledRents();
+    console.log("data", data.length);
     setUserScheduledRents(data);
+    console.log(userScheduledRents);
+  };
+
+  React.useEffect(() => {
+    const willFocusSubscription = navigation.addListener("focus", () => {
+      fetchData();
+    });
+
+    return willFocusSubscription;
   }, []);
 
   return (
