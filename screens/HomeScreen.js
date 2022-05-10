@@ -14,7 +14,7 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.scrollview}>
+      <ScrollView>
         {avaibleRents.map((rent) => (
           <TouchableOpacity
             key={rent.id}
@@ -29,12 +29,7 @@ export default function HomeScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  scrollview: {
-    padding: 8,
-    margin: 8,
-  },
   container: {
-    // display: "flex",
     flex: 1,
     justifyContent: "center",
   },
