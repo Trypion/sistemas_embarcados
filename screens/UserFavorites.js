@@ -1,26 +1,35 @@
-import React from "react";
-import { ScrollView, StyleSheet, TouchableOpacity } from "react-native";
+import React, { useEffect } from "react";
+import { ScrollView, StyleSheet, TouchableOpacity, Button } from "react-native";
 import Card from "../components/Card";
-import { View } from "../components/Themed";
+import { useFocusEffect } from "@react-navigation/native";
+import { View, Text } from "../components/Themed";
 import { getUserScheduledRents } from "../services/Api";
 
 export default function UserFavorites({ navigation }) {
   const [userScheduledRents, setUserScheduledRents] = React.useState([]);
 
-  const fetchData = async () => {
-    const data = await getUserScheduledRents();
-    console.log("data", data.length);
-    setUserScheduledRents(data);
-    console.log(userScheduledRents);
-  };
+  useFocusEffect(
+    React.useCallback(() => {
+      let isActive = true;
+      const fetchData = async () => {
+        try {
+          const data = await getUserScheduledRents();
 
-  React.useEffect(() => {
-    const willFocusSubscription = navigation.addListener("focus", () => {
+          if (isActive) {
+            setUserScheduledRents([...data]);
+          }
+        } catch (e) {
+          // Handle error
+        }
+      };
+
       fetchData();
-    });
 
-    return willFocusSubscription;
-  }, []);
+      return () => {
+        isActive = false;
+      };
+    }, [])
+  );
 
   return (
     <View style={styles.container}>

@@ -165,7 +165,6 @@ export async function getUserScheduledRents() {
 
 export async function addUserScheduledRent(rent) {
   USER_SCHEDULED_RENTS.push(rent);
-  // console.log(USER_SCHEDULED_RENTS);
 }
 
 export async function findScheduledRent(id) {
