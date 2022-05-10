@@ -1,24 +1,27 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import Card from "../components/Card";
 import { View } from "../components/Themed";
 import { getAvaibleRents } from "../services/Api";
 
 export default function HomeScreen({ navigation }) {
-  const [avaibleRents, setAvaibleRents] = React.useState([])
+  const [avaibleRents, setAvaibleRents] = React.useState([]);
 
-  React.useEffect(async ()=> {
-    const data = await getAvaibleRents()
-    setAvaibleRents(data)
-  }, [])
+  React.useEffect(async () => {
+    const data = await getAvaibleRents();
+    setAvaibleRents(data);
+  }, []);
 
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <ScrollView style={styles.scrollview}>
         {avaibleRents.map((rent) => (
-          <div key={rent.id} onClick={() => navigation.navigate('RentDetail', {rent})}>
-            <Card key={rent.id} rent={rent}/>
-          </div>
+          <TouchableOpacity
+            key={rent.id}
+            onPress={() => navigation.navigate("RentDetail", { rent })}
+          >
+            <Card key={rent.id} rent={rent} />
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>
@@ -26,10 +29,14 @@ export default function HomeScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  scrollview: {
+    padding: 8,
+    margin: 8,
+  },
   container: {
+    // display: "flex",
     flex: 1,
-    alignItems: "center",
-    // justifyContent: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 20,
