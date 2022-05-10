@@ -25,7 +25,7 @@ const AVAIBLE_RENTS = [
     area: "100m²",
     fotos: [
       "https://www.estilofontana.com.br/blog/wp-content/uploads/2019/05/apartamento-decorado-1-1170x780.jpg",
-      "https://www.ryazbek.com.br/wp-content/uploads/2019/11/original-ccba23ab2eb493b23837674485286bcf.jpg",
+      "https://swellconstrucoes.com.br/wp-content/uploads/2021/04/apartamento-de-luxo-1.png",
       "https://cdn.incorposul.com.br/wp-content/uploads/2019/08/cropped-como-comprar-um-apartamento-1.jpg"
     ],
     descricao:
@@ -54,7 +54,7 @@ const AVAIBLE_RENTS = [
     area: "100m²",
     fotos: [
       "https://www.estilofontana.com.br/blog/wp-content/uploads/2019/05/apartamento-decorado-1-1170x780.jpg",
-      "https://www.ryazbek.com.br/wp-content/uploads/2019/11/original-ccba23ab2eb493b23837674485286bcf.jpg",
+      "https://swellconstrucoes.com.br/wp-content/uploads/2021/04/apartamento-de-luxo-1.png",
       "https://cdn.incorposul.com.br/wp-content/uploads/2019/08/cropped-como-comprar-um-apartamento-1.jpg"
     ],
     descricao:
@@ -83,7 +83,7 @@ const AVAIBLE_RENTS = [
     area: "100m²",
     fotos: [
       "https://www.estilofontana.com.br/blog/wp-content/uploads/2019/05/apartamento-decorado-1-1170x780.jpg",
-      "https://www.ryazbek.com.br/wp-content/uploads/2019/11/original-ccba23ab2eb493b23837674485286bcf.jpg",
+      "https://swellconstrucoes.com.br/wp-content/uploads/2021/04/apartamento-de-luxo-1.png",
       "https://cdn.incorposul.com.br/wp-content/uploads/2019/08/cropped-como-comprar-um-apartamento-1.jpg"
     ],
     descricao:
@@ -116,7 +116,7 @@ const USER_SCHEDULED_RENTS = [
     area: "100m²",
     fotos: [
       "https://www.estilofontana.com.br/blog/wp-content/uploads/2019/05/apartamento-decorado-1-1170x780.jpg",
-      "https://www.ryazbek.com.br/wp-content/uploads/2019/11/original-ccba23ab2eb493b23837674485286bcf.jpg",
+      "https://swellconstrucoes.com.br/wp-content/uploads/2021/04/apartamento-de-luxo-1.png",
       "https://cdn.incorposul.com.br/wp-content/uploads/2019/08/cropped-como-comprar-um-apartamento-1.jpg"
     ],
     descricao:
@@ -145,7 +145,7 @@ const USER_SCHEDULED_RENTS = [
     area: "100m²",
     fotos: [
       "https://www.estilofontana.com.br/blog/wp-content/uploads/2019/05/apartamento-decorado-1-1170x780.jpg",
-      "https://www.ryazbek.com.br/wp-content/uploads/2019/11/original-ccba23ab2eb493b23837674485286bcf.jpg",
+      "https://swellconstrucoes.com.br/wp-content/uploads/2021/04/apartamento-de-luxo-1.png",
       "https://cdn.incorposul.com.br/wp-content/uploads/2019/08/cropped-como-comprar-um-apartamento-1.jpg"
     ],
     descricao:

@@ -1,4 +1,3 @@
-import * as WebBrowser from "expo-web-browser";
 import { StyleSheet, Image } from "react-native";
 
 import Colors from "../constants/Colors";
