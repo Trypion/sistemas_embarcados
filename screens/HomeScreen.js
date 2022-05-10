@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import Card from "../components/Card";
 import { View } from "../components/Themed";
 import { getAvaibleRents } from "../services/Api";
@@ -16,9 +16,9 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.container}>
       <ScrollView>
         {avaibleRents.map((rent) => (
-          <div key={rent.id} onClick={() => navigation.navigate('RentDetail', {rent})}>
+          <TouchableOpacity key={rent.id} onPress={() => navigation.navigate('RentDetail', {rent})}>
             <Card key={rent.id} rent={rent}/>
-          </div>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>

@@ -9,7 +9,7 @@ export default function Card({ rent }) {
   const { nome, quantidade_quartos, valor, endereco } = rent; 
 
   return (
-    <View style={styles.card}>      
+    <View>      
         <Text>{nome}</Text>
         <Text>quantidade de quartos: {quantidade_quartos}</Text>
         <Text>valor: {valor}</Text>
@@ -23,23 +23,4 @@ function handleHelpPress() {
 }
 
 const styles = StyleSheet.create({
-  card: {
-    display: "flex",
-    // flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 5,
-    width: "90vw",
-    backgroundColor: "#fff6",
-    margin: 8,
-    padding: 8,
-    elevation: 5,
-    shadowColor: "#fff",
-    shadowOffset: {
-      width: 2,
-      height: 3,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-  }
 });

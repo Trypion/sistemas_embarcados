@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import Card from "../components/Card";
 import { View } from "../components/Themed";
 import { getUserScheduledRents } from "../services/Api";
@@ -16,12 +16,12 @@ export default function UserFavorites({ navigation }) {
     <View style={styles.container}>
       <ScrollView>
         {userScheduledRents.map((rent) => (
-          <div
+          <TouchableOpacity
             key={rent.id}
-            onClick={() => navigation.navigate("RentDetail", { rent })}
+            onPress={() => navigation.navigate("RentDetail", { rent })}
           >
             <Card key={rent.id} rent={rent} />
-          </div>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>
